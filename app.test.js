@@ -32,7 +32,7 @@ describe("first", () => {
     })
 
     it("should return .-. / -...- ....- ....- .-.-. ..-. / .-- -....- / .-... .-- ..-. -....- .-- -.--. -.--.- ..-. .-- -....- -.. . -.. .--.-. ... / ..--- ...-- .-. ..--- when given a keysmash `r =44+f w- &wf-w()fw-ded@s 23r2` (special characters test", () => {
-        const string = englishToMorse("Hello, World!")
+        const string = englishToMorse("r =44+f w- &wf-w()fw-ded@s 23r2")
         expect(string).toBe(".-. / -...- ....- ....- .-.-. ..-. / .-- -....- / .-... .-- ..-. -....- .-- -.--. -.--.- ..-. .-- -....- -.. . -.. .--.-. ... / ..--- ...-- .-. ..---")
     })
 
