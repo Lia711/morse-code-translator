@@ -17,13 +17,23 @@
   margin-bottom: 5%;
   text-align: center;
 }
-.content label {
+.content .main-content {
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+}
+.content .main-content .translator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content .main-content label {
   font-size: 40px;
   font-family: "Lucida Sans";
-  margin-bottom: 1%;
+  margin-bottom: 3%;
   text-align: center;
 }
-.content input {
+.content .main-content input {
   padding: 0px 15px;
   width: 400px;
   height: 100px;
@@ -33,7 +43,7 @@
   color: black;
   background-color: white;
 }
-.content .output {
+.content .main-content .output {
   padding: 0px 15px;
   width: 400px;
   height: 100px;
@@ -42,7 +52,7 @@
   color: black;
   background-color: white;
 }
-.content button {
+.content .main-content button {
   margin-top: 3%;
   width: 120px;
   height: 40px;
