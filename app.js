@@ -1,12 +1,15 @@
 import { morseCode } from "./morse-code.js"
 
-export const englishToMorse = (string) => {
+const inputField=document.querySelector("input")
+const outputField=document.querySelector(".output")
+
+
+export const englishToMorse = (event) => {
     //new string, only lowercase letters, split and create new array
     //each symbol being returned corresponds to the value of the keys in morse code array
-    const morseString = string.toLowerCase().split("").map((letter)=> {
-        return morseCode[letter]
+    const morseString = event.target.value.toLowerCase().split("").map((letter)=> {
+        return morseCode[letter].join(" ")
     })
-    //space after each letter in morse
-    return morseString.join(" ")
+    outputField.innerHTML= morseString
 }
-console.log(englishToMorse("r =44+f w- &wf-w()fw-ded@s 23r2"))
+inputField.addEventListener("input", englishToMorse)
