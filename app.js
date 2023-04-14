@@ -13,3 +13,11 @@ export const englishToMorse = () => {
     outputField.innerHTML= morseString.join(" ")
 }
 inputField.addEventListener("input", englishToMorse)
+
+
+export const morseToENglish = (morse) => {
+    const engString = morse.split(" ").map((symbol)=> {
+        return englishCode[symbol]
+    })
+    return engString.join("")
+}

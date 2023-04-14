@@ -39,7 +39,7 @@ describe("first", () => {
 
 })
 
-describe("first", () => {
+describe("second", () => {
     it("should return the string `a` when given `.-` (letter test)", () => {
         const string = morseToEnglish(".-")
         expect(string).toBe("a")
