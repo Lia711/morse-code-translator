@@ -1,4 +1,5 @@
 import { englishToMorse } from "./app"
+import { morseToEnglish } from "./app"
 
 describe("first", () => {
     it("should return .- when given the string of `a` (letter test)", () => {
@@ -37,3 +38,37 @@ describe("first", () => {
     })
 
 })
+
+describe("first", () => {
+    it("should return the string `a` when given `.-` (letter test)", () => {
+        const string = morseToEnglish(".-")
+        expect(string).toBe("a")
+    })
+
+    it("should return the string `lia` when given string `.-.. .. .-` (word test)", () => {
+        const string = morseToEnglish(".-.. .. .-")
+        expect(string).toBe("lia")
+    })
+
+    it("should return `liana petrova` when given `.-.. .. .- -. .- / .--. . - .-. --- ...- .-` (words with space test)", () => {
+        const string = morseToEnglish(".-.. .. .- -. .- / .--. . - .-. --- ...- .-")
+        expect(string).toBe("liana petrova")
+    })
+
+    it("should return the number 25 when given `..--- .....` (number test)", () => {
+        const string = morseToEnglish("..--- .....")
+        expect(string).toBe("25")
+    })
+
+    it("should return the sentence `hello, world!` when given `.... . .-.. .-.. --- --..-- / .-- --- .-. .-.. -.. -.-.--` (sentence with punctuation test)", () => {
+        const string = morseToEnglish(".... . .-.. .-.. --- --..-- / .-- --- .-. .-.. -.. -.-.--")
+        expect(string).toBe("hello, world!")
+    })
+
+    it("should return the keysmash `r =44+f w- &wf-w()fw-ded@s 23r2` when given `.-. / -...- ....- ....- .-.-. ..-. / .-- -....- / .-... .-- ..-. -....- .-- -.--. -.--.- ..-. .-- -....- -.. . -.. .--.-. ... / ..--- ...-- .-. ..---` (special characters test", () => {
+        const string = morseToEnglish(".-. / -...- ....- ....- .-.-. ..-. / .-- -....- / .-... .-- ..-. -....- .-- -.--. -.--.- ..-. .-- -....- -.. . -.. .--.-. ... / ..--- ...-- .-. ..---")
+        expect(string).toBe("r =44+f w- &wf-w()fw-ded@s 23r2")
+    })
+
+})
+
