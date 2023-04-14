@@ -1,5 +1,4 @@
-import { englishToMorse } from "./app"
-import { morseToEnglish } from "./app"
+import { englishToMorse, morseToEnglish } from "./app"
 
 describe("first", () => {
     it("should return .- when given the string of `a` (letter test)", () => {

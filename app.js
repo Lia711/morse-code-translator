@@ -1,23 +1,20 @@
-import { morseCode } from "./morse-code.js"
+import { morseCode, englishCode } from "./morse-code.js"
 
-const inputField=document.querySelector("input")
-const outputField=document.querySelector(".output")
-
-
-export const englishToMorse = () => {
+export const englishToMorse = (string) => {
     //new string, only lowercase letters, split and create new array
     //each symbol being returned corresponds to the value of the keys in morse code array
-    const morseString = inputField.value.toLowerCase().split("").map((letter)=> {
+    const morseString = string.toLowerCase().split("").map((letter)=> {
         return morseCode[letter]
     })
-    outputField.innerHTML= morseString.join(" ")
+    //morse code letters separated by space
+    return morseString.join(" ")
 }
-inputField.addEventListener("input", englishToMorse)
 
-
-export const morseToENglish = (morse) => {
-    const engString = morse.split(" ").map((symbol)=> {
+export const morseToEnglish = (symbol) => {
+    //split by spaces to find letters
+    const engString = symbol.split(" ").map((symbol)=> {
         return englishCode[symbol]
     })
     return engString.join("")
 }
+
