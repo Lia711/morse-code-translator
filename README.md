@@ -16,3 +16,8 @@ Features:
 
 Known issues:
 - media query for mobile screen width not working
+
+Screenshots:
+
+![image](https://github.com/Lia711/morse-code-translator/assets/125596830/22a6e08a-e27b-4bdb-975c-9fa3044b7776)
+
